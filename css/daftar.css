@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+    font-weight: 800;
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+body {
+    background-image: url(../assets/ikn2.jpeg);
+    height: 130vh;
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+}
+.main{
+    padding-bottom: 20px;
+}
+.daftar {
+    background-color: #3529477c;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.container {
+    margin: 0;
+}
+
+form {
+    padding: 20px;
+    color: white;
+
+}
+
+.card {
+    background-color: rgba(172, 183, 209, 0.319);
+    border-radius: 20px;
+    border: 1px solid white;
+    backdrop-filter: blur(10px);
+}
+
+p {
+    color: white;
+}
+
+.btn {
+    background-color: rgb(31, 31, 31);
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 150px;
+}
+
+footer {
+    background-color:#3529477c;
+    /* background:transparent; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ======================RESPONSIVE==================== */
+
+@media screen and (max-width: 980px) {
+    body {
+        background-size: 500%;
+    }
+
+    img {
+        height: 90px;
+    }
+}
