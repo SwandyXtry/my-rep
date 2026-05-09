@@ -1,0 +1,37 @@
+name: Auto Commit
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *' # Menjalankan bot setiap hari jam 00:00 UTC
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 
+        with:
+          persist-credentials: true 
+          fetch-depth: 0
+
+      - name: Make changes
+        run: echo "Update pada $(date)" >> auto.txt
+
+      - name: Commit and push
+        run: |
+          # Menggunakan data profil GitHub kamu
+          git config --local user.email "SwandyXtry@users.noreply.github.com"
+          git config --local user.name "SwandyXtry"
+          
+          git add .
+          git commit -m "Bot: Auto-commit $(date)"
+          
+          # Perbaikan format URL push
+          git push origin main
