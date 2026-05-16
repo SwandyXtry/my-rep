@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * *' # Menjalankan bot setiap hari jam 00:00 UTC
+    - cron: '0 */6 * * *' # kelipatan 6 jam
 
 jobs:
   auto-commit:
